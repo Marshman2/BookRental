@@ -8,10 +8,10 @@ namespace BookRental
 {
     public static class BookBrowser
     {
-        private static void BrowseBooks()
+        public static void BrowseBooks()
         {
             Console.Clear();
-            Console.WriteLine();
+            Console.WriteLine("Testing");
 
         
         

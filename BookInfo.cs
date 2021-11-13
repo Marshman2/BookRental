@@ -14,16 +14,15 @@ namespace BookRental
         public int pages { get; set; }
         public int price { get; set; }
 
-
-
-        public class Books : BookInfo
+        public BookInfo(string aGenre, string aTitle, string aAuthor, int aPages, int aPrice)
         {
-         
-
-
-
-
+            genre = aGenre;
+            title = aTitle;
+            author = aAuthor;
+            pages = aPages;
+            price = aPrice;
         }
+
 
 
 

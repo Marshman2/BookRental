@@ -15,7 +15,7 @@ namespace BookRental
             {
                 showMenu = MainMenu();
             }
-
+        
             static bool MainMenu()
             {
                 Console.Clear();
@@ -27,12 +27,15 @@ namespace BookRental
                 switch (Console.ReadLine())
                 {
                     case "1":
-                        BrowseBooks();
+                        BookBrowser.BrowseBooks();
                         return true;
                     case "2":
-                        ShoppingCart();
+                        //ShoppingCart();
                         return true;
                     case "3":
+                        Console.Clear();
+                        ListOfBooks();
+                        Console.ReadLine();
                         return false;
                     default:
                         return true;
@@ -41,28 +44,21 @@ namespace BookRental
             }
 
 
-
-
-
-
-
-
-
-
-
-
-
-            List<String> bookList = new List<String>(); 
+            static void ListOfBooks()
             {
-                bookList.Add("Harry Potter");
-                bookList.Add("Long Road");
 
-                foreach (String item in bookList)
+                List<BookInfo> books = new List<BookInfo>();
                 {
-                    Console.WriteLine(item);
+                    books.Add(new BookInfo("testing", "testing", "testing", 2, 3));
+                    books.Add(new BookInfo("test", "test", "test", 2, 3));
+                    books.Add(new BookInfo("testi", "testi", "testi", 2, 3));
+
+                    foreach (var book in books)
+                    {
+                        Console.WriteLine($"Here is a book: {book.genre}, {book.author}, {book.title}, {book.pages}, {book.price}");
+                    }
+
                 }
-
-
             }
 
 
