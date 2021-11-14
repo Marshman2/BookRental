@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BookRental
 {
-    class ShoppingCart
+    public class ShoppingCart
     {
 
 

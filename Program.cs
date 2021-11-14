@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace BookRental
 {
     class Program
     {
+        
         static void Main(string[] args)
         {
             Console.WriteLine("*****************************************");
@@ -21,7 +23,10 @@ namespace BookRental
 
 
                     Console.Clear();
-                    Console.WriteLine("Choose an option:");
+                    Console.WriteLine("**********************");
+                    Console.WriteLine("Louisville Book Rental");
+                    Console.WriteLine("**********************");
+                    Console.WriteLine("\nChoose an option:");
                     Console.WriteLine("\n1) Browse Books");
                     Console.WriteLine("\n2) Shopping Cart");
                     Console.WriteLine("\n3) Return");
@@ -59,7 +64,11 @@ namespace BookRental
 
             static void ListOfBooks()
             {
-
+                Console.WriteLine("**********************");
+                Console.WriteLine("Louisville Book Rental");
+                Console.WriteLine("**********************");
+                Console.WriteLine("\nBrowse and select your desired book below. There is a two book rental limit.");
+                
                 List<BookInfo> books = new List<BookInfo>();
                 {
                     books.Add(new BookInfo("\n1) testing", "testing", "testing", 2, 3));
@@ -69,28 +78,50 @@ namespace BookRental
                     foreach (var book in books)
                     
                     {
-                        
+                       
                         Console.WriteLine($"\n{book.genre}, {book.author}, {book.title}, {book.pages}, {book.price}");
 
-                        
-                        
-                    
-                    
                     }
 
                 }
+                string userinput;
+                userinput = Console.ReadLine();
 
-               
+                switch (userinput)
+                {
+                    case "1":
+                        Cart();
+                        
+                        
+                        break;
+
+                    case "2":
+                        Console.Clear();
+                        //ShoppingCart();
+                        break;
+
+                    case "3":
+                        Console.Clear();
+                        Menu();
+                        break;
+
+                    default:
+                        break;
+                }
+
+
             }
 
-           // static void ShoppingCart();
+            static void Cart()
             {
-
-
-
+                string userinput;
+                userinput = Console.ReadLine();
+                Console.WriteLine($"Your book{userinput} has been sent to the cart!");
 
 
             }
+           
+            
 
 
 
