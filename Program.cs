@@ -46,8 +46,9 @@ namespace BookRental
                         break;
 
                     case "2":
-                        Console.Clear();
-                        //ShoppingCart();
+                        Console.WriteLine("Your cart is empty!");
+                        Console.ReadLine();
+                        
                         break;
 
                     case "3":
@@ -68,17 +69,17 @@ namespace BookRental
                 Console.WriteLine("Louisville Book Rental");
                 Console.WriteLine("**********************");
                 Console.WriteLine("\nBrowse and select your desired book below. There is a two book rental limit.");
-                
+
                 List<BookInfo> books = new List<BookInfo>();
                 {
-                    books.Add(new BookInfo("\n1) testing", "testing", "testing", 2, 3));
+                    books.Add(new BookInfo("\n1) testing", "testing", "testing", 2,3));
                     books.Add(new BookInfo("\n2) test", "test", "test", 2, 3));
                     books.Add(new BookInfo("\n3) testi", "testi", "testi", 2, 3));
 
                     foreach (var book in books)
-                    
+
                     {
-                       
+
                         Console.WriteLine($"\n{book.genre}, {book.author}, {book.title}, {book.pages}, {book.price}");
 
                     }
@@ -90,14 +91,15 @@ namespace BookRental
                 switch (userinput)
                 {
                     case "1":
-                        Cart();
-                        
-                        
+                        Console.WriteLine("You have selected testing");
+
+
+
                         break;
 
                     case "2":
                         Console.Clear();
-                        //ShoppingCart();
+                        Console.WriteLine("");
                         break;
 
                     case "3":
@@ -107,17 +109,25 @@ namespace BookRental
 
                     default:
                         break;
+
+
+
                 }
+                String input = Console.ReadLine();
+                List<String> userList = new List<String>();
+                userList.Add(input);
+                String inputNewUser = Console.ReadLine();
+                userList.Add(inputNewUser);
+                foreach (var user in userList)
+                {
+                    Console.WriteLine(user);
 
 
-            }
 
-            static void Cart()
-            {
-                string userinput;
-                userinput = Console.ReadLine();
-                Console.WriteLine($"Your book{userinput} has been sent to the cart!");
+                   
 
+
+                }
 
             }
            

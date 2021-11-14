@@ -7,14 +7,15 @@ using System.Threading.Tasks;
 namespace BookRental
 {
     public class ShoppingCart
-    {
-
-
-
-
-
-
-
-
+    { 
+        public 
+    
+    
+    
+    
+    
+    
+    
     }
+   
 }
