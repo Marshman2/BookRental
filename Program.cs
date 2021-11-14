@@ -9,36 +9,49 @@ namespace BookRental
         {
             Console.WriteLine("*****************************************");
             Console.WriteLine("Hello, Welcome to Louisville Book Rental!");
+            Console.WriteLine("*****************************************");
+            Console.WriteLine("\nPress Enter To Shop For Books");
+            Console.ReadLine();
+           
+            Menu();
+           
+                static void Menu()
+                {
 
-            bool showMenu = true;
-            while (showMenu)
-            {
-                showMenu = MainMenu();
-            }
-        
-            static bool MainMenu()
-            {
-                Console.Clear();
-                Console.WriteLine("Choose an option:");
-                Console.WriteLine("1) Browse Books");
-                Console.WriteLine("2) Shopping Cart");
-                Console.WriteLine("3) Exit");
 
-                switch (Console.ReadLine())
+
+                    Console.Clear();
+                    Console.WriteLine("Choose an option:");
+                    Console.WriteLine("\n1) Browse Books");
+                    Console.WriteLine("\n2) Shopping Cart");
+                    Console.WriteLine("\n3) Return");
+                    
+
+                    string userinput;
+                    userinput = Console.ReadLine();
+
+
+
+                switch (userinput)
                 {
                     case "1":
-                        BookBrowser.BrowseBooks();
-                        return true;
-                    case "2":
-                        //ShoppingCart();
-                        return true;
-                    case "3":
                         Console.Clear();
                         ListOfBooks();
                         Console.ReadLine();
-                        return false;
+                        break;
+
+                    case "2":
+                        Console.Clear();
+                        //ShoppingCart();
+                        break;
+
+                    case "3":
+                        Console.Clear();
+                        Menu();
+                        break;
+                        
                     default:
-                        return true;
+                        break;
                 }
 
             }
@@ -49,16 +62,34 @@ namespace BookRental
 
                 List<BookInfo> books = new List<BookInfo>();
                 {
-                    books.Add(new BookInfo("testing", "testing", "testing", 2, 3));
-                    books.Add(new BookInfo("test", "test", "test", 2, 3));
-                    books.Add(new BookInfo("testi", "testi", "testi", 2, 3));
+                    books.Add(new BookInfo("\n1) testing", "testing", "testing", 2, 3));
+                    books.Add(new BookInfo("\n2) test", "test", "test", 2, 3));
+                    books.Add(new BookInfo("\n3) testi", "testi", "testi", 2, 3));
 
                     foreach (var book in books)
+                    
                     {
-                        Console.WriteLine($"Here is a book: {book.genre}, {book.author}, {book.title}, {book.pages}, {book.price}");
+                        
+                        Console.WriteLine($"\n{book.genre}, {book.author}, {book.title}, {book.pages}, {book.price}");
+
+                        
+                        
+                    
+                    
                     }
 
                 }
+
+               
+            }
+
+           // static void ShoppingCart();
+            {
+
+
+
+
+
             }
 
 
