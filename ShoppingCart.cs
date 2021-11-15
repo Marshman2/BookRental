@@ -4,18 +4,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BookRental
-{
-    public class ShoppingCart
-    { 
-        public 
-    
-    
-    
-    
-    
-    
-    
-    }
+//{
+//    //public class ShoppingCart
+//    {
+        
+
+
+
+
+
+
+
+//    }
    
-}
+//}
